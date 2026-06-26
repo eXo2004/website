@@ -16,11 +16,11 @@ const navLinks = [
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-gray-100">
         {/* ── Header ── */}
-        <header className="border-b border-gray-100">
+        <header className="bg-white border-b border-gray-200 shadow-sm">
           <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+            <Link href="/" className="font-semibold text-blue-900 hover:text-blue-600 transition-colors">
               Nikolas Bosold
             </Link>
             <nav className="flex gap-6">
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link
                   key={href}
                   href={href}
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+                  className="text-sm text-blue-700 hover:text-blue-900 transition-colors"
                 >
                   {label}
                 </Link>
@@ -38,13 +38,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {/* ── Main ── */}
-        <main className="flex-1 max-w-3xl mx-auto px-6 py-12 w-full">
+        <main className="flex-1 max-w-3xl mx-auto px-6 py-10 w-full">
           {children}
         </main>
 
         {/* ── Footer ── */}
-        <footer className="border-t border-gray-100">
-          <div className="max-w-3xl mx-auto px-6 py-6 text-sm text-gray-400 flex justify-between items-center">
+        <footer className="bg-white border-t border-gray-200">
+          <div className="max-w-3xl mx-auto px-6 py-5 text-sm text-blue-400 flex justify-between items-center">
             <span>© {new Date().getFullYear()} Nikolas Bosold</span>
             <span>Gebaut mit Next.js</span>
           </div>
